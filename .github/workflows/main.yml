@@ -1,6 +1,13 @@
 name: Build
 
-on: [push]
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: 'Model (e.g. G970F)'
+        required: false
+        default: 'G970F,G973F,G975F'
 
 env:
   TOOLCHAIN: cruel
