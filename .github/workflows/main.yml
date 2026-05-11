@@ -13,6 +13,7 @@ env:
   TOOLCHAIN: cruel
   INSTALLER: yes
 
+
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -64,7 +65,7 @@ jobs:
                        model=${{ matrix.model }} \
                        name="Cruel-devel"        \
                        toolchain=$TOOLCHAIN      \
-                       +magisk                   \
+                       +magisk=v26.1             \
                        +nohardening              \
                        +ttl                      \
                        +wireguard                \
